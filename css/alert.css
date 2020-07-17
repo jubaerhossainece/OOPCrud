@@ -1,0 +1,17 @@
+.alert{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.alert-success{
+
+}
+
+.alert-danger{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
