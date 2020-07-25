@@ -64,6 +64,21 @@ html{
 	border: 1px solid #3467eb !important;
 }
 
+.btn-info{
+	background-color: #c4c8ca;
+	border-color: #c4c8ca;
+}
+
+.btn-info:hover{
+	background-color: #a9adaf !important;
+	border-color: #a9adaf !important;
+}
+
+.btn-info:active{
+	background-color: #a9adaf !important;
+	border-color: #a9adaf !important;
+}
+
 
 *{
 	transition: all 0.3s ease;

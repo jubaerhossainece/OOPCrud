@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 include('includes/header.php');?>
 
@@ -8,3 +9,5 @@ if(isset($_GET['id'])){
     $db = NEW Database();
     $query = $db->destroy($id);
 }
+?>
+<?php ob_end_flush(); ?>

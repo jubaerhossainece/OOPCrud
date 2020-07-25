@@ -87,7 +87,8 @@ class Database{
             die("Error : ".$this->link->errno.")".$this->link->error);
         }
     }
-    
+   
+   //Deleting data from database 
     public function destroy($id){
         $query = "DELETE FROM tbl_user WHERE id = $id";
         $delete_row = $this->link->query($query) or die($this->link->error.__LINE__);

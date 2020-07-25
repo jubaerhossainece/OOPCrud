@@ -1,4 +1,8 @@
 <?php 
+  ini_set('display_errors','1'); 
+?>
+<?php 
+ob_start();
 include('includes/header.php');
 session_start();
 ?>
@@ -8,20 +12,47 @@ $db = new Database();
 $read = $db->index();
 ?>
 
-<?php 
+
+<!doctype html>
+<html>
+<head>
+ <title>PHP OOP CRUD</title>
+ <link rel = "stylesheet" href="includes/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href="css/app.css"/>
+  <link rel = "stylesheet" href="css/alert.css"/>
+  <script src="includes/jquery.min.js"></script>
+  <srcipt src = "includes/bootstrap.min.js"></srcipt>
+</head>
+     <body>
+        <div class="container">
+           <nav class="navbar navbar-default">
+               <div class="container-fluid">
+                   <div class="navbar-header">
+                       <a class="navbar-brand" href="index.php">Login Register System using PHP</a>
+                   </div>
+                   <ul class="nav navbar-nav pull-right">
+                       <li><a href = "index.php">Home</a></li>
+                       
+                   </ul>
+               </div>
+           </nav>
+           <?php 
     if (isset($_SESSION['message']))
     { 
     echo $_SESSION['message']; 
     unset($_SESSION['message']); 
     }
  ?>
+
+ 
 <div class="panel panel-default">
    <div class="index-heading">
       <div>          
         <h2><strong> All Users</strong></h2>
       </div>
       <div class="add-user">
-        <a class="btn btn-success" href="create.php">+ Add User</a>
+        <a class="btn btn-success" href="create.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</a>
       </div>
     </div>  
 <div class="panel-body">
@@ -61,4 +92,7 @@ $read = $db->index();
 </div>
 </div>
 
-<?php include('includes/footer.php');?>
+<?php 
+  include('includes/footer.php');
+  ob_end_flush();
+?>
