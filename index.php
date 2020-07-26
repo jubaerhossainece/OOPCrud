@@ -29,7 +29,7 @@ $read = $db->index();
            <nav class="navbar navbar-default">
                <div class="container-fluid">
                    <div class="navbar-header">
-                       <a class="navbar-brand" href="index.php">Login Register System using PHP</a>
+                       <a class="navbar-brand" href="index.php">User CRUD System using OOP</a>
                    </div>
                    <ul class="nav navbar-nav pull-right">
                        <li><a href = "index.php">Home</a></li>
